@@ -25,6 +25,12 @@ export default function populateDom() {
 
       el.input.value = '';
       el.defUnit = 'celcius';
+
+      if (el.defValue >= 25) {
+        document.body.className = 'bg-gradient-to-r from-red-500 to-yellow-500';
+      } else {
+        document.body.className = 'bg-gradient-to-r from-green-400 to-blue-500';
+      }
     });
   });
 }
