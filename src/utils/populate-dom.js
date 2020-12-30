@@ -1,7 +1,7 @@
 import * as el from './dom-elements';
 
 export default function populateDom() {
-  const weatherLink = `http://api.openweathermap.org/data/2.5/weather?q=${el.input.value}&appid=${el.myApiKey}&units=metric`;
+  const weatherLink = `https://api.openweathermap.org/data/2.5/weather?q=${el.input.value}&appid=${el.myApiKey}&units=metric`;
   fetch(weatherLink, { mode: 'cors' }).then((response) => {
     response.json().then((data) => {
       el.cityName.className = 'text-white text-5xl';
