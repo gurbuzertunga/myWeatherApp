@@ -1,6 +1,6 @@
 import * as el from './dom-elements';
 
-export default function populateDom() {
+const populateDom = () => {
   const weatherLink = `https://api.openweathermap.org/data/2.5/weather?q=${el.input.value}&appid=${el.myApiKey}&units=metric`;
   fetch(weatherLink, { mode: 'cors' }).then((response) => {
     response.json().then((data) => {
@@ -33,4 +33,6 @@ export default function populateDom() {
       }
     });
   });
-}
+};
+
+export { populateDom }; // eslint-disable-line

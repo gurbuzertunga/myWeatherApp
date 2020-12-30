@@ -1,5 +1,5 @@
 import * as el from './utils/dom-elements';
-import populateDom from './utils/populate-dom';
+import { populateDom } from './utils/populate-dom';
 import { converter } from './utils/converter';
 
 el.button.addEventListener('click', () => {
