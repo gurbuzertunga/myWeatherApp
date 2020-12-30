@@ -31,8 +31,14 @@ const populateDom = () => {
       } else {
         document.body.className = 'bg-gradient-to-r from-green-400 to-blue-500';
       }
+    })
+      .catch((error) => {
+        console.log('My Error:', error, 'Please enter a decent City Name');
+      });
+  })
+    .catch((error) => {
+      console.log(`My Error:${error} Please enter a decent City Name`);
     });
-  });
 };
 
 export { populateDom }; // eslint-disable-line
