@@ -6,7 +6,7 @@ export default function populateDom() {
     response.json().then((data) => {
       el.cityName.className = 'text-white text-5xl';
       el.cityName.textContent = data.name;
-      el.defValue = parseInt(data.main.temp, 10);
+      el.defValue = parseInt(data.main.temp); // eslint-disable-line
       el.degree.textContent = `${el.defValue}°`;
       el.degree.className = 'text-white text-5xl';
       el.degreeType.textContent = 'Celcius';

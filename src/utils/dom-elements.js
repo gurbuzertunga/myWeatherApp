@@ -8,8 +8,8 @@ const degree = document.createElement('p');
 const iconContainer = document.createElement('div');
 const iconImg = document.createElement('img');
 const degreeType = document.getElementById('degree-type');
-const defUnit = 'celcius';
-const defValue = 0;
+let defUnit = 'celcius'; // eslint-disable-line
+let defValue = 0; // eslint-disable-line
 
 export {
   weatherOutput,
